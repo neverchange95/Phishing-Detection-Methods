@@ -1,0 +1,10 @@
+# macOS Finder
+.DS_Store
+.DS_STORE
+
+# JetBrains IDE
+.idea/
+
+# Python venv-Verzeichnisse (egal wo)
+venv/
+
