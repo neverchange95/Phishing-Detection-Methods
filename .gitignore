@@ -5,6 +5,6 @@
 # JetBrains IDE
 .idea/
 
-# Python venv-Verzeichnisse (egal wo)
+# Python venv
 venv/
 
