@@ -161,7 +161,7 @@ def main():
     feed_csv = Path(local_dir).joinpath("feed.csv")
     if not feed_csv.exists():
         print("ERROR: feed file not found: feed.csv")
-        exit(1)
+        sys.exit(2)
 
     # hold previous phish-feed data frame in memory to compare it with the actual one
     prev_df: pd.DataFrame = read_feed_csv_as_dataframe(feed_csv)
@@ -192,13 +192,13 @@ def main():
                 print("✏️ writing new entries...")
                 write_new_entries(new_entries)
 
-                # TODO: call blacklist function with list of new urls, if new entries have arrived
+                # send url, discover_time and pulled-time of new entries to blacklist-server
                 cols = ["url", "discover_time"]
                 missing_cols = [c for c in cols if c not in new_entries.columns]
                 if not missing_cols:
                     df = new_entries.loc[:, cols].copy()
                     df['discover_time'] = df['discover_time'].map(utc_to_berlin)
-                    df['pulled-time'] = pull_time
+                    df['pulled_time'] = pull_time
 
                     payload = df.to_dict(orient="records")
 
