@@ -5,4 +5,4 @@
 * Pulls OpenPhish Academic Use Program realtime phishing url feed within a specified time window
   * Time Window can be changed with `--pull-interval`. By default, set to 30 seconds.
 * Writes only the most recent entries to a csv file that occurred within the specified time window
-* Sends url and some metadata to a listening blacklist-server for evaluation 
+* Sends url and some metadata of recent entries to a listening blacklist-server for evaluation
