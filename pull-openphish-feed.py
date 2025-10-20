@@ -14,7 +14,7 @@ import requests
 
 BERLIN = ZoneInfo("Europe/Berlin")
 FMT_OUT = "%d/%m/%y %H:%M:%S"
-BLACKLIST_SERVER_URL = "http://127.0.0.1:8080/url-list"
+BLACKLIST_SERVER_URL = "http://127.0.0.1:8080/ingest-urls"
 
 
 def utc_to_berlin(ts_str: str) -> str:
