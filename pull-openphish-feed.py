@@ -136,7 +136,7 @@ def main():
         "--repo-url", required=True, help="https://<YOUR_GITHUB_USER>:<TOKEN>@github.com/openphish/academic"
     )
     parser.add_argument(
-        "--pull-interval", type=int, default=30, help="interval between pull requests (default: 30s)"
+        "--pull-interval", type=int, default=900, help="interval between pull requests (default: 900s = 15min)"
     )
 
     # parse arguments
