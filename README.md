@@ -6,3 +6,9 @@
   * Time Window can be changed with `--pull-interval`. By default, set to 30 seconds.
 * Writes only the most recent entries to a csv file that occurred within the specified time window
 * Sends url and some metadata of recent entries to a listening blacklist-server for evaluation
+
+# blacklist-server.py
+    python blacklist-server.py --gsb-key <YOUR_API_KEY>
+* Opens a HTTP-Server with one route `/ingest-urls` to receive phishing and begin urls
+* Ckecks urls against Googe Safe Browsing API v4 Blacklist
+* Creates a CSV-File witch shows the result for requested urls by their label and some metadata
