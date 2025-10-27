@@ -12,3 +12,8 @@
 * Opens a HTTP-Server with one route `/ingest-urls` to receive phishing and begin urls
 * Ckecks urls against Googe Safe Browsing API v4 Blacklist
 * Creates a CSV-File witch shows the result for requested urls by their label and some metadata
+
+# feature-extractor.py
+    python feature-extractor.py --isPhishing <0/1> --file <YOUR_BENGIN/PHISHING_CSV_FILE>
+* Extracts 27 Features from given urls and safe them into a feature.csv file
+* This feature list can then be used for machine learning algos
