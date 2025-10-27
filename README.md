@@ -31,6 +31,8 @@
     python split-by-label.py <YOUR_CSV_FILE_WITH_URLS_AND_LABEL> --out0 out0.csv --out1 out1.csv
 * Helper Script which is used to split a CSV-File with both phishing and bengin labeld urls into two seperated files
 * Input file must contain columns: "url" and "label"
-* Label must be 0/1: 0 --> Phishing, 1 --> Bengin
+* Label must be 0/1
+    * 0 --> Phishing
+    * 1 --> Bengin
 * `--out0`: Output File for Phishing URLs
 * `--out1`: Output File for Bengin URLs
