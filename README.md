@@ -19,7 +19,7 @@
 * This feature list can then be used for machine learning algos
 * `--isPhishing 0` --> CSV-File contains Phishing-URLs
 * `--isPhishing 1` --> CSV-File contains Bengin-URLs
-* ‼️ Your CSV-File must contain a column named "url" where urls to analyse are stored
+* Your CSV-File must contain a column named "url" where urls to analyse are stored
 
 # push-begin-urls-to-blacklist-server.py
     python push-begin-urls-to-blacklist-server.py --csv-file <YOUR_CSV_FILE_WITH_URLS>
@@ -30,5 +30,7 @@
 # split-by-label.py
     python split-by-label.py <YOUR_CSV_FILE_WITH_URLS_AND_LABEL> --out0 out0.csv --out1 out1.csv
 * Helper Script which is used to split a CSV-File with both phishing and bengin labeld urls into two seperated files
+* Input file must contain columns: "url" and "label"
+* Label must be 0/1. 0 --> Phishing, 1 --> Bengin
 * `--out0`: Output File for Phishing URLs
 * `--out1`: Output File for Bengin URLs
