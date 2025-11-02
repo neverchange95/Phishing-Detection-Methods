@@ -30,7 +30,8 @@ def split_by_label(input_csv: Path, out0: Path, out1: Path) -> None:
     df[url_col] = df[url_col].astype(str).str.strip()
     df = df[df[url_col] != ""]
 
-    # parse label to int
+    # parse label to int ('phishing' --> 0, 'legitimate' --> 1)
+    df[label_col] = df[label_col].replace({'phishing': 0, 'legitimate': 1})
     df[label_col] = pd.to_numeric(df[label_col], errors="coerce")
     df = df[df[label_col].isin([0, 1])].copy()
     df[label_col] = df[label_col].astype(int)
