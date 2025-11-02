@@ -4,6 +4,7 @@
 
 # JetBrains IDE
 .idea/
+.ipynb_checkpoints/
 
 # Python venv
 venv/
