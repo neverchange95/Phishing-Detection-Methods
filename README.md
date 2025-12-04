@@ -36,3 +36,5 @@
     * 1 --> Bengin
 * `--out0`: Output File for Phishing URLs
 * `--out1`: Output File for Bengin URLs
+
+... more coming soon!
