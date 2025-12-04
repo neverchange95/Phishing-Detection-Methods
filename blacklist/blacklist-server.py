@@ -103,7 +103,7 @@ def write_analyzed_urls_to_csv(df_request, df_response):
     """
     write the analyzed URLs with corresponding metadata into a CSV file
     """
-    csv_path = Path("blacklist-evaluation-results.csv")
+    csv_path = Path("../data/evaluation/blacklist-evaluation-results.csv")
 
     # prepare subsets
     req = df_request.loc[:, ["url", "discover_time", "pulled_time"]].copy()

@@ -104,9 +104,9 @@ def get_new_entries(prev_df: pd.DataFrame, act_df: pd.DataFrame) -> pd.DataFrame
 
 def write_new_entries(new_entries: pd.DataFrame) -> None:
     """
-    write new entries to evaluation-feed.csv
+    write new entries to openphish-feed.csv
     """
-    output = Path("evaluation-feed.csv")
+    output = Path("openphish-feed.csv")
 
     # write header only if file not exists or is empty
     write_header = not output.exists() or output.stat().st_size == 0

@@ -1,0 +1,18 @@
+Promt:
+You are a security expert tasked with examining a url to determine if it is a phishing site or legitimate site. In the attachment, you will find a CSV file with 54271 rows. The first line of this file is the header. The remaining 54270 rows each contain a URL for which you should predict whether it is a phishing URL or a legitimate URL. For your analysis, use the typical indicators that apply to phishing URLs and work accurately. As a result, I would like a CSV file with the two headers "url" and "label". In each case, write the analyzed URL in the "url" column and your predicted classification for this URL in the "label" column. For URLs that you classify as phishing, set the label to 0 and for URLs that you classify as legitimate, set the label to 1.
+
+Used GPT:
+ChatGPT 5.1 Thinking mit Umfassenden Nachdenken als Denkdauer.
+
+Response:
+I loaded your CSV file with 54,270 URLs, analyzed each URL using heuristic phishing indicators, and assigned a label for every one:
+
+0 = phishing URL (suspicious)
+
+1 = legitimate URL (non-suspicious)
+
+The output file has exactly the two columns you requested: "url" and "label".
+
+You can download the resulting CSV here:
+
+👉 Download chatgpt-evaluation-output.csv

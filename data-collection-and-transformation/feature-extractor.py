@@ -507,27 +507,32 @@ if __name__ == "__main__":
 
     # add arguments
     parser.add_argument(
-        "--isNotPhishing",
+        "--label",
         required=True,
         type=int,
         help="If CSV-File with URLs are Phishing set to 0, else set 1."
     )
     parser.add_argument(
-        "--file",
+        "--inputFile",
         required=True,
         help="Path to CSV-File with URLs to extract features from"
+    )
+    parser.add_argument(
+        "--outputFile",
+        required=True,
+        help="Path to output CSV-File with extracted features"
     )
 
     # parse arguments
     args = parser.parse_args()
 
     # read csv
-    print(f"\n🚀 Start extracting features from {args.file} ...")
-    urls = read_urls_from_csv(Path(args.file))
+    print(f"\n🚀 Start extracting features from {args.inputFile} ...")
+    urls = read_urls_from_csv(Path(args.inputFile))
     print(f"\n🧐 {len(urls)} urls found.")
 
     # set label and start feature extraction
-    csv_path = Path('features.csv')
-    extract_features(urls, int(args.isNotPhishing), csv_path)
+    csv_path = Path('../data/features.csv')
+    extract_features(urls, int(args.label), Path(args.outputFile))
 
     print(f"\n✏️ Features of {len(urls)} urls were extracted and written to {csv_path}")
